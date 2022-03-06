@@ -1,0 +1,125 @@
+<div class="container-fluid begin">
+    <div class="row space">
+        <div class="col-lg-12">
+        </div>
+      </div>
+<div class="co">
+    <div class="row">
+        <div class="col-lg-8 col-md-9 col-sm-12">
+            <div class="row profile">
+                <div class="col-lg-4 col-md-5 col-8">
+                    <div class="row">
+                        <div class='col-12'>
+                            <img class="profPic" src="../../../assets/images/pro.jpg" alt="the profilr picture">
+                        </div>
+                        <div class='col-12'>
+                            <div class="row buttons">
+                                <div class='col-6'>
+                                    <button type="button" (click)='save()' class="btn btn-primary">حفظ</button>
+                                </div>
+                                <div class='col-6'>
+                                    <button type="button" (click)='update()' class="btn btn-primary">تعديل</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-8 col-12 inputs">
+                    <div class="input-group">
+                        <span class="input-group-text">الاسم </span>
+                        <input [disabled]='activeState' [(ngModel)]="myInfo.name"type="text" aria-label="First name bb dis" class="form-control" value='اسماعيل مدحت الشيخ'>
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-text">التيليفون </span>
+                        <input [disabled]='activeState' [(ngModel)]="myInfo.phone" type="number" aria-label="First name bb dis" class="form-control" value='22113242727'>
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-text">العنوان الحالى </span>
+                        <input [disabled]='activeState' [(ngModel)]="myInfo.curAddress" type="text" aria-label="First name bb dis" class="form-control" value='طنطا'>
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-text">العنوان </span>
+                        <input [disabled]='activeState' [(ngModel)]="myInfo.address" type="text" aria-label="First name bb dis" class="form-control" value='الاسكندريه'>
+                      </div>
+                      <div class="input-group">
+                        <label class="input-group-text" for="inputGroupSelect01">النوع</label>
+                        <select [disabled]='activeState' [(ngModel)]="myInfo.gender" class="form-select bb dis" id="inputGroupSelect01">
+                          <option value="ذكر">ذكر</option>
+                          <option value="انثى">انثى</option>
+                        </select>
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-text">تاريخ الميلاد </span>
+                        <input [disabled]='activeState' [(ngModel)]="myInfo.dateOfBirth" type="date" aria-label="First name bb dis" class="form-control">
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-text">الوظيفه </span>
+                        <input [disabled]='activeState' type="text" aria-label="First name bb dis" class="form-control" value='مهندس'>
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-text">البريد الالكترونى </span>
+                        <input [disabled]='activeState' [(ngModel)]="myInfo.email" type="text" class="form-control bb dis" value='esmail2233@gmail.com'>
+                      </div>
+                </div>
+            </div>
+            <div class="row selectcatg">
+                <div class="col-5">
+                    <h3>فئه البحث</h3>
+                </div>
+                <div class="col-5">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>عامه</option>
+                        <option value="1">الهندسه</option>
+                        <option value="2">الطب</option>
+                        <option value="3">الزراعه</option>
+                      </select>
+                </div>
+            </div>
+            <div class="post" *ngFor="let post of myPosts">
+                <div class="row">
+                    <div class="col-5">
+                        <p class="name"><i class="fas fa-user-alt"></i> {{ post.name}} </p>
+                    </div>
+                    <div class="col-3">
+                        <p>{{ post.dateOfPost }} </p>
+                    </div>
+                    <div class="col-4 type">
+                        <p>الفئه : {{ post.type}}</p>
+                    </div>
+                </div>
+                <div class="row Content">
+                    <div class="col-12">
+                        <p>{{ post.content }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8 col-sm-9 "></div>
+                    <div class="col-4 col-sm-3 col-md-3">
+                        <button type="button" class="btn btn-primary">تفقد</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+        </div>
+        <div id="listElements" class="col-lg-3 col-md-3 list">
+            <div *ngIf="w.innerWidth < 768" class="row exit">
+                <i (click)="close()" class="col-12 fas fa-times-circle"></i>
+            </div>
+            <button type="button" (click)="toggleOne()" class="btn btn-primary">
+                v قائمة طلبات المساعده الخاصه بى</button>
+            <div class="consone" id="FD">
+                <a routerLink="/my-app">اعلان طلب وظيفه</a>
+                <a routerLink="my-thing-to-be-done" >things to be done</a>
+            </div>
+            <button type="button" (click)="toggleTwo()" class="btn btn-primary">v قائمه مقدمى الخدمات</button>
+            <div class="constwo" id="SD">
+                <a routerLink="/my-found">قائمه المفقودات</a>
+                <a routerLink="/job-list">قائمه اعلان الوظائف </a>
+                <a routerLink="/my-app-for-thing-to-be-done">قائمه رحلاتى</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+

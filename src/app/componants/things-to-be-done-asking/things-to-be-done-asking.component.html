@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row space">
+    <div class="col-lg-12">
+    </div>
+  </div>
+    <h1 class="jobHead">انشاء طلب توصيل </h1>
+    <form>
+        <div class="row">
+          <div class="col-md-5">
+            <label >نقطة البدايه</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="col-md-5">
+            <label >نقطه النهايه</label>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+          <div class="row">
+            <div class="col-md-5">
+                <label >تاريخ</label>
+                <input type="date" class="form-control">
+            </div>
+            <div class="col-md-5">
+                <label class="spaceBeforeTheButton">الشهاده</label>
+                <button type="button" class="btn btn-success">ارسال</button>
+            </div>
+          </div>
+      </form>
+      <div class="row pog">
+          <div class="col-xs-10 break"></div>
+      </div>
+      <h1>قائمه السفريات المتاحه </h1>
+      <div class="row offerCard">
+          <div class="col-md-8">
+            <div class="row things">
+              <div class="col-md-5">
+                <p class="name">اسم المسافر : {{ "اسماعيل مدحت على الشيخ" }}</p>
+                <p>التلفون : {{ "11223346577" }}</p>
+                <p>نوع الخدمه : {{ "توصيل" }}</p>
+                <p>نقطه البدايه : {{ "البحيره" }}</p>
+              </div>
+              <div class="col-md-5">
+                <p>نقطه النهايه : {{ "الاسكندريه" }}</p>
+                <p>المقابل : {{ "200$" }}</p>
+                <p>ادنى تاريخ : {{ "22-2-2022 " }}</p>
+                <p>اقصى تاريخ : {{ "25-2-2022 " }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+              <div class="row cardBtns">
+                  <div class="col-md-10 col-4"><button type="button" class="btn btn-success">ارسال رساله</button></div>
+                  <div class="col-md-10 col-4"><button type="button" class="btn btn-success">محادثه</button></div>
+                  <div class="col-md-10 col-4"><button type="button" class="btn btn-success">التقديم</button></div>
+              </div>
+          </div>
+      </div>
+</div>

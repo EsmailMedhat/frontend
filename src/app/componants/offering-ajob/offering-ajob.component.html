@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row space">
+    <div class="col-lg-12">
+    </div>
+  </div>
+    <h1 class="jobHead">عرض وظيفه</h1>
+        <div class="row">
+          <div class="col-md-5">
+            <label >مستوى التعليم</label>
+            <input [(ngModel)]="newJob.required_qualification" type="text" class="form-control">
+          </div>
+          <div class="col-md-5">
+            <label >الشهادات المطلوبه</label>
+            <input [(ngModel)]="newJob.required_certificates" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-5">
+                <label > المهارات المطلوبه</label>
+                <input [(ngModel)]="newJob.required_skills" type="text" class="form-control">
+            </div>
+            <div class="col-md-5">
+                <label >سنين الخبره</label>
+              <input type="number" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+                <label >ملف معلومات</label>
+                <input type="file" class="form-control">
+            </div>
+            <div class="col-md-5">
+                <label class="spaceBeforeTheButton">ززززززز</label>
+                <button (click)="createJob()" type="button" class="btn btn-success">ارسال</button>
+            </div>
+          </div>
+      <div class="row pog">
+          <div class="col-xs-10 break"></div>
+      </div>
+      <h1>طالبى التوظيف و العمل</h1>
+      <div *ngFor="let temp of needs" class="row jobCard">
+          <div class="col-md-5 infoBox lll">
+            <p>مستوى التعليم : {{temp.qualification}}</p>
+            <p>المهارات المطلوبه : {{temp.skills}}</p>
+            <p>الشهاده المطلوبه : {{temp.certificates}}</p>
+          </div>
+          <div class="col-md-3 lll">
+              <div class="row cardBtns">
+                  <div class="col-md-10 col-4"><button type="button" class="btn btn-success">ارسال رساله</button></div>
+                  <div class="col-md-10 col-4"><button type="button" class="btn btn-success">محادثه</button></div>
+              </div>
+          </div>
+      </div>
+</div>

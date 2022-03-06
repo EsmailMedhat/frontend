@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row space">
+    <div class="col-lg-12">
+    </div>
+  </div>
+    <h1>عرضى لوظيفه</h1>
+    <div  class="row jobCard">
+        <div class="col-md-9 cardInfo">
+          <input type=hidden value="{{newJob.id}}" aria-label="First name bb dis" class="form-control" [disabled]="block">
+          <div class="input-group">
+                <span class="input-group-text">المؤهل</span>
+                <input type="text" [(ngModel)]="newJob.qualification" value="{{newJob.qualification}}" aria-label="First name bb dis" class="form-control" [disabled]="block">
+              </div>
+              <div class="input-group">
+                <span class="input-group-text">الشهادات </span>
+                <input type="text" aria-label="First name bb dis" [(ngModel)]="newJob.certificates" class="form-control" value="{{newJob.certificates}}" [disabled]="block">
+              </div>
+<!--              <div class="input-group">
+                <span class="input-group-text">المهارات</span>
+                <input type="text" value="{{temp}}" aria-label="First name bb dis" class="form-control" value='الكتابه السريعه'>
+              </div>-->
+              <div class="input-group">
+                <span class="input-group-text">نبزه عنك </span>
+                <input type="text" value="{{newJob.summary_about_you}}" [(ngModel)]="newJob.summary_about_you"  aria-label="First name bb dis" class="form-control" value='ممكنة اشتغل تحت الضغط' [disabled]="block">
+              </div>
+              <div class="input-group">
+                <span class="input-group-text">صور الشهادات </span>
+                <input type="file" aria-label="First name bb dis" class="form-control" [disabled]="block">
+              </div>
+            </div>
+        <div class="col-md-3 lll">
+            <div class="row cardBtns">
+                <div class="col-md-11 col-4"><button (click)="enableInputs()" type="button" class="btn btn-success">تعديل</button></div>
+                <div class="col-md-11 col-4"><button (click)="update()" type="button" class="btn btn-success">حفظ</button></div>
+                <div class="col-md-11 col-4"><button (click)="delete()" type="button" class="btn btn-success">حذف</button></div>
+            </div>
+        </div>
+    </div>
+</div>

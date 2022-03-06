@@ -1,0 +1,68 @@
+<nav class="b">
+  <div class="row space">
+    <div class="col-lg-12">
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row" id="title-container">
+      <span></span>
+      <span></span>
+      <div id="title" style="color: #0d0d0d;font-size: 17px;font-weight: bold">الابلاغ عن مفقودات</div>
+    </div>
+    <div class="row mt-4">
+      <div class="container">
+        <div *ngFor="let temp of founds" class="row mt-2" style="background-color: white;">
+          <div class=" card">
+            <div class="card-body">
+              <div class="input-group" dir="ltr">
+                <input class="ena{{temp.id}}" type="text" [(ngModel)]="temp.type" value="{{temp.type}}"dir="rtl" placeholder="نوع الفقود" class="form-control" disabled>
+                <span class="input-group-text" id="basic-addon20">@</span>
+              </div>
+              <div class="input-group my-2" dir="ltr">
+                <input class="ena{{temp.id}}" [(ngModel)]="temp.found_date" value="{{temp.found_date}}" type="text" dir="rtl" placeholder="تاريخ الفقد" class="form-control" disabled>
+                <span class="input-group-text" id="basic-addon2">@</span>
+              </div>
+              <div class="input-group my-2" dir="ltr">
+                <input class="ena{{temp.id}}" [(ngModel)]="temp.found_place" value="{{temp.found_place}}" type="text" dir="rtl" placeholder="مكان الفقد" class="form-control" disabled>
+                <span class="input-group-text" id="basic-addon3">@</span>
+              </div>
+              <div class="input-group my-2" dir="ltr">
+                <textarea class="ena{{temp.id}}" [(ngModel)]="temp.description" value="{{temp.description}}" class="form-control" dir="rtl" placeholder="الوصف" disabled></textarea>
+                <span class="input-group-text" id="basic">@</span>
+              </div>
+              <div class="input-group my-2" dir="ltr">
+                <input class="ena{{temp.id}}" [(ngModel)]="temp.first_color" type="text" value="{{temp.first_color}}" dir="rtl" placeholder="اللون الاولي" class="form-control" disabled>
+                <span class="input-group-text" id="">@</span>
+              </div>
+              <div class="input-group my-2" dir="ltr">
+                <input class="ena{{temp.id}}" [(ngModel)]="temp.second_color" type="text" value="{{temp.second_color}}" dir="rtl" placeholder="اللون الثانوي" class="form-control" disabled>
+                <span class="input-group-text" id="basi">@</span>
+              </div>
+              <div class="input-group my-2" dir="ltr">
+                <input class="ena{{temp.id}}" [(ngModel)]="temp.brand" type="text" value="{{temp.brand}}" dir="rtl" placeholder="الماركه" class="form-control" disabled>
+                <span class="input-group-text" id="ba">@</span>
+              </div>
+              <div class="input-group my-2" dir="ltr">
+                <input class="ena{{temp.id}}" type="text" [(ngModel)]="temp.category" value="{{temp.category}}" dir="rtl" placeholder="الفئه" class="form-control" disabled>
+                <span class="input-group-text">@</span>
+              </div>
+              <div class="input-group my-2" dir="ltr">
+                <input class="ena{{temp.id}}" class="ena{{temp.id}}" type="file" id="file" dir="rtl" placeholder="صوره المفقود" class="form-control" disabled>
+                <span class="input-group-text" id="n4">@</span>
+              </div>
+              <div class="d-flex flex-row" dir="ltr">
+                <button class="btn btn-outline-success" (click)="delete(temp.id)" style="margin-right: 15px ;"> حذف </button>
+                <button class="btn btn-outline-success" (click)="update(temp)" style="margin-right: 15px ;"> حفظ </button>
+                <button (click)="enableInputs(temp.id)" class="btn btn-outline-success">  تعديل </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!--
+
+-->

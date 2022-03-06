@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row space">
+    <div class="col-lg-12">
+    </div>
+  </div>
+    <h1>قائمة المتقدمين على الوظيفه</h1>
+    <div *ngFor="let temp of jobs" class="row jobCard">
+        <div class="col-md-8 infoBox">
+            <p>الاسم : {{temp.user.name}}</p>
+            <p>العنوان : {{temp.user.main_address}}</p>
+            <p>الموبيل : {{temp.user.phone}}</p>
+        </div>
+        <div class="col-md-3">
+            <div class="row cardBtns">
+                <div class="col-md-10 col-4"><button type="button" class="btn btn-success">ارسال رساله</button></div>
+                <div class="col-md-10 col-4"><button type="button" class="btn btn-success">محادثه</button></div>
+                <div class="col-md-10 col-4"><button (click)="delete1(temp.id)" type="button" class="btn btn-success">رفض</button></div>
+                <div class="col-md-10 col-4"><button (click)="delete2(temp.id)" type="button" class="btn btn-success">قبول</button></div>
+            </div>
+        </div>
+    </div>
+</div>
